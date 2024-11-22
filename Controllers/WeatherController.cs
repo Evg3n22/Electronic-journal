@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ElectronicJournal.Controllers
@@ -15,45 +16,49 @@ namespace ElectronicJournal.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IActionResult> GetWeather(double latitude, double longitude)
+        public IActionResult GetWeather(double latitude, double longitude)
         {
             string apiKey = "c5c314cd2c712d87b92764d4edad2bae";
 
-            HttpClient httpClient = _httpClientFactory.CreateClient();
+            var tcs = new TaskCompletionSource<IActionResult>();
 
-            try
+            ThreadPool.QueueUserWorkItem(async _ =>
             {
-                string url = $"http://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={apiKey}&units=metric&lang=ru";
-                HttpResponseMessage response = await httpClient.GetAsync(url);
-
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    string responseBody = await response.Content.ReadAsStringAsync();
+                    string url = $"http://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={apiKey}&units=metric&lang=ru";
 
-                    // Перетворення англійских назв погоди на українські
-                    responseBody = ReplaceEnglishWeatherNamesWithRussian(responseBody);
+                    HttpClient httpClient = _httpClientFactory.CreateClient();
 
-                    // Встановлення кодировки UTF-8 для відповіді
-                    Response.ContentType = "application/json; charset=utf-8";
+                    HttpResponseMessage response = await httpClient.GetAsync(url);
 
-                    return Content(responseBody, "application/json");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string responseBody = await response.Content.ReadAsStringAsync();
+
+                        // Перетворення англійских назв погоди на українські
+                        responseBody = ReplaceEnglishWeatherNamesWithUkrainian(responseBody);
+
+                        // Встановлення кодировки UTF-8 для відповіді
+                        tcs.SetResult(Content(responseBody, "application/json; charset=utf-8"));
+                    }
+                    else
+                    {
+                        tcs.SetResult(StatusCode((int)response.StatusCode, response.ReasonPhrase));
+                    }
+
+                    httpClient.Dispose();
                 }
-                else
+                catch (Exception ex)
                 {
-                    return StatusCode((int)response.StatusCode, response.ReasonPhrase);
+                    tcs.SetResult(StatusCode(500, ex.Message));
                 }
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-            finally
-            {
-                httpClient.Dispose();
-            }
+            });
+
+            return tcs.Task.Result;
         }
 
-        private string ReplaceEnglishWeatherNamesWithRussian(string responseBody)
+        private string ReplaceEnglishWeatherNamesWithUkrainian(string responseBody)
         {
             // Заміняю англійські назви погоди на українські
             responseBody = responseBody.Replace("Thunderstorm", "Гроза");
@@ -74,7 +79,5 @@ namespace ElectronicJournal.Controllers
 
             return responseBody;
         }
-
-
     }
 }
