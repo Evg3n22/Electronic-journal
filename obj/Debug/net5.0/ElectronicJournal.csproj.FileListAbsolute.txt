@@ -5,7 +5,6 @@ L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.deps.json
 L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.runtimeconfig.json
 L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.runtimeconfig.dev.json
 L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.dll
-L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ref\ElectronicJournal.dll
 L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.pdb
 L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.Views.dll
 L:\RiderProjects\ElectronicJournal\bin\Debug\net5.0\ElectronicJournal.Views.pdb
@@ -137,7 +136,6 @@ L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.MvcApplica
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.RazorAssemblyInfo.cache
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.RazorAssemblyInfo.cs
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\ElectronicJournal.StaticWebAssets.Manifest.cache
-L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\ElectronicJournal.StaticWebAssets.xml
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\scopedcss\bundle\ElectronicJournal.styles.css
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.TagHelpers.input.cache
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.TagHelpers.output.cache
@@ -161,8 +159,15 @@ L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtm
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.RazorTargetAssemblyInfo.cache
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.RazorTargetAssemblyInfo.cs
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.Views.pdb
-L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.csproj.CopyComplete
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.dll
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ref\ElectronicJournal.dll
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.pdb
 L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.genruntimeconfig.cache
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\refint\ElectronicJournal.dll
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\ElectronicJournal.sourcelink.json
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\ElectronicJournal.StaticWebAssets.Pack.cache
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\msbuild.ElectronicJournal.Microsoft.AspNetCore.StaticWebAssets.props
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\msbuild.build.ElectronicJournal.props
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.ElectronicJournal.props
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.ElectronicJournal.props
+L:\RiderProjects\ElectronicJournal\obj\Debug\net5.0\Electron.43546134.Up2Date

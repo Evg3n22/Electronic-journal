@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElectronicJournal")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01f76fb68ac503ff4c685a22e892488c424a53b4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElectronicJournal.Views")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
